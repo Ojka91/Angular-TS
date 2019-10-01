@@ -5,6 +5,7 @@
             "type": "node",
             "cwd": "${workspaceRoot}",
             "name": "DEBUG",
+            "console": "externalTerminal",
             "outFiles": ["${workspaceRoot}/out/**/*.js"],
             "preLaunchTask": "build",
             "program": "${workspaceRoot}/test.ts",
