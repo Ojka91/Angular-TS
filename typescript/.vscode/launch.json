@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "cwd": "${workspaceRoot}",
+            "name": "DEBUG",
+            "outFiles": ["${workspaceRoot}/out/**/*.js"],
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/test.ts",
+            "request": "launch",
+            "sourceMaps": true,
+            "stopOnEntry": false
+        }
+    ]
+}
