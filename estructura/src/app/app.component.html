@@ -1,3 +1,12 @@
+<div>
+  <button *ngFor="let pagina of arrayNumPagines">{{pagina}}</button>
+  <select [(ngModel)]="mostraCotxes" (change)=calcularPaginacio()>
+      <option selected value="5">5</option>
+      <option value="8">8</option>
+      <option value="10">10</option>
+  </select>
+</div>
+
 
 
 <table class="table">
@@ -11,11 +20,11 @@
     <th>Telefon</th>
     <th>Mail</th>
   </tr>
-  <tr *ngFor='let cotxe of cotxes | filter'>
+  <tr *ngFor="let cotxe of cotxes | filter: mostraCotxes">
     <td><img src="assets/Logos/{{cotxe.marca}}.png" style="width: 40px" alt=""></td>
     <td>{{cotxe.modelo}}</td>
     <td>{{cotxe.precio | currency : 'EUR' : 'symbol' : '1.0-2'}}</td>
-    <td><img src="http://www.genware.es/genlib/carnumberimage.php?code='{{cotxe.matricula}}'" width=80px alt=""> </td>
+    <td><img src="http://www.genware.es/genlib/carnumberimage.php?code='{{cotxe.matricula}}'" width=80px alt=""></td>
     <td><img cocheStyle src="{{cotxe.imagen}}" alt="" width=60px> </td>
     <td>{{cotxe.propietario}}</td>
     <td>{{cotxe.telefono}}</td>

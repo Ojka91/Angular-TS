@@ -1,0 +1,10 @@
+<table class="border">
+  <tr>
+    <th>ID</th>
+    <th>NOM</th>
+  </tr>
+  <tr *ngFor="let note of notes">
+    <td><a [routerLink]="['/nota', note.id]" routerLinkActive="activada">{{note.id}}</a></td>
+    <td><a [routerLink]="['/nota', note.id]">{{note.nom}}</a></td>
+  </tr>
+</table>
